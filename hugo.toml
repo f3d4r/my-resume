@@ -1,0 +1,10 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'My Resume'
+theme = 'hello-friend-ng'
+
+[params]
+  name = "Федькин Иван"
+  Email = "fedkinivn@example.com"
+  Phone = "+1234567890"
+  GitHub = "https://github.com/f3d4r"
