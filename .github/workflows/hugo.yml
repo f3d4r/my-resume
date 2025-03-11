@@ -1,0 +1,29 @@
+name: Deploy Hugo to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Убедись, что твоя основная ветка называется main или измени здесь
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout репозитория
+        uses: actions/checkout@v4
+
+      - name: Установка Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+          extended: true
+
+      - name: Сборка сайта
+        run: hugo --minify
+
+      - name: Развёртывание на GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
