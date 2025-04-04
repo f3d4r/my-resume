@@ -3,7 +3,7 @@ name: Deploy Hugo to GitHub Pages
 on:
   push:
     branches:
-      - main  # Убедись, что твоя основная ветка называется main или измени здесь
+      - main  
   pull_request:
 
 jobs:
