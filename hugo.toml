@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = "https://f3d4r.github.io/my-resume/"
 languageCode = 'en-us'
 title = 'My Resume'
 theme = 'hello-friend-ng'
